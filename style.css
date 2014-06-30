@@ -81,3 +81,9 @@ a img.aligncenter {
   margin: 0;
   padding: 0 4px 5px;
 }
+
+/* =Front Page
+-------------------------------------------------------------- */
+.panel {
+	height:500px;
+}
