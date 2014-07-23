@@ -29,31 +29,31 @@
     </head>
     <body <?php body_class(); ?>>
     	<header id="primary">
-    		<nav class="navbar navbar-default" role="navigation">
-				<div class="container-fluid">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-					</div>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-						<ul class="nav navbar-nav"><?php
-							$panels = new WP_query( array( 
-							   'post_type' => 'panel',
-							   'post_status' => 'publish',
-							   'orderby' => 'menu_order',
-							   'order' => 'ASC'
-							) );
-							while( $panels->have_posts() ) : $panels->the_post(); ?>
-								<li><a href="#<?php the_title(); ?>"><?php the_title(); ?></a></li><?php
-							endwhile; ?>
-						</ul>
-					</div><!-- /.navbar-collapse -->
+    		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div class="container">
+					<div class="row">
+						<div class="navbar-brand navbar-left">
+							<?php bloginfo( 'name' ); ?>
+						</div>
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse navbar-right" id="nav">
+							<ul class="nav navbar-nav">
+								<li><a href="#home">Home</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#pricing">Pricing</a></li>
+								<li><a href="#contact">Contact</a></li>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+	                </div>
 				</div><!-- /.container-fluid -->
 			</nav>
     	</header>

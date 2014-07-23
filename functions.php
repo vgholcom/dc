@@ -13,7 +13,7 @@ function dc_scripts() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js', array('jquery'), '2.7.1' );
     wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.1.1' );
-    wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery','bootstrap-js'), '1.0', true );
+    wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js' );
 }
 add_action( 'wp_enqueue_scripts', 'dc_scripts' );
 
@@ -168,3 +168,42 @@ function dc_save_item_order() {
 }
 add_action('wp_ajax_item_sort', 'dc_save_item_order');
 add_action('wp_ajax_nopriv_item_sort', 'dc_save_item_order');
+
+/**
+ * Add Panel Meta Boxes
+ */
+function dc_panel_metabox_init() {
+    add_meta_box( 'data-settings-meta', 'Data Panel Settings', 'dc_panel_settings_meta', 'panel', 'side', 'default');
+}
+add_action( 'admin_init', 'dc_panel_metabox_init' );
+
+
+/**
+ * Panel Settings Meta Box
+ */
+function dc_panel_settings_meta( $post ) {
+    $data_bg = get_post_meta($post->ID, 'dc_panel_bg', true);?>
+    <p class="howto">Customize panel functionality.</p>
+    <label for="dc_panel_bg">Background Color:</label>
+    <select name="dc_panel_bg">
+        <option <?php selected( $data_bg, 'gray' ); ?> value="gray">Gray</option>
+        <option <?php selected( $data_bg, 'black' ); ?> value="black">Black</option>
+        <option <?php selected( $data_bg, 'yellow' ); ?> value="yellow">Yellow</option>
+        <option <?php selected( $data_bg, 'white' ); ?> value="white">White</option>
+        <option <?php selected( $data_bg, 'gray-pattern' ); ?> value="gray-pattern">Gray Pattern</option>
+        <option <?php selected( $data_bg, 'black-pattern' ); ?> value="black-pattern">Black Pattern</option>
+        <option <?php selected( $data_bg, 'yellow-pattern' ); ?> value="yellow-pattern">Yellow Pattern</option>
+    </select><br>
+<?php }
+
+/**
+ * Save Panel Meta Values
+ */
+function dc_panel_metabox_save( $post_id ) {
+    // update c404_data_bg
+    if( isset($_POST['dc_panel_bg']) ) {
+        update_post_meta( $post_id, 'dc_panel_bg', $_POST['dc_panel_bg'] );
+    }
+}
+add_action( 'save_post', 'dc_panel_metabox_save' );
+

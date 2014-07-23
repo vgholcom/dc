@@ -82,8 +82,97 @@ a img.aligncenter {
   padding: 0 4px 5px;
 }
 
+/* =Global
+-------------------------------------------------------------- */
+body {
+  background-color: #231F20;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #231F20;
+}
+
+/* =Header
+-------------------------------------------------------------- */
+.navbar {
+  border-bottom: 3px solid #5d5d5d;
+}
+.navbar-default .navbar-brand {
+  color: #FFF100;
+}
+.navbar-default {
+  background-color: #231F20;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+.navbar-default .navbar-nav li:hover a {
+  color: #FFF100;
+}
+
 /* =Front Page
 -------------------------------------------------------------- */
-.panel {
-	height:500px;
+.fp-panel {
+	height:800px;
+}
+.yellow-pattern {
+  background-image: url('img/yellowtexture.png');
+}
+.black-pattern {
+  background-image: url('img/blacktexture.png');
+}
+.gray-pattern {
+  background-image: url('img/graytexture.png');
+}
+.yellow {
+  background-color: #FFF100;
+}
+.black {
+  background-color: #231F20;
+}
+.white {
+  background-color: #FFFFFF;
+}
+#home,
+#about,
+#about2,
+#pricing {
+  position: relative;
+}
+#home img,
+#about img,
+#about2 img,
+#pricing img {
+  position: absolute;
+  max-width: 100%;
+  bottom: 0;
+}
+#home .text,
+#about .text,
+#about2 .text,
+#pricing .text {
+  padding-top: 100px;
+}
+#home h2 {
+  float:right;
+}
+#about .text {
+  color: #fff;
+}
+#pricing a {
+  color: #231F20;
+  text-decoration: underline;
+}
+#pricing a:hover {
+  text-decoration: none;
+}
+#contact {
+  height: auto;
+  color: #fff;
+}
+#contact h1 {
+  margin: 40px 0;
+}
+#contact a {
+  color: #fff100;
 }
