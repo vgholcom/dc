@@ -10,7 +10,7 @@ get_header(); ?>
 		<div class="container">
 			<div class="text">
 				<h1>WE MIGRATE, DESIGN, AND DEVELOPE SIMPLE, FUNCTIONAL, AND TIMELESS WEBSITES.</h1>
-				<h2>DARK CANARY STUDIO</h2>
+				<h2><strong>DARK CANARY</strong> STUDIO</h2>
 			</div>
 		</div>
 		<img src="<?php echo get_template_directory_uri() ?>/img/canary01.png"/>

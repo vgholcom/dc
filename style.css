@@ -85,6 +85,7 @@ a img.aligncenter {
 /* =Global
 -------------------------------------------------------------- */
 body {
+  font-family: 'Montserrat', sans-serif;
   background-color: #231F20;
   text-transform: uppercase;
   font-weight: bold;
@@ -94,7 +95,7 @@ body {
 /* =Header
 -------------------------------------------------------------- */
 .navbar {
-  border-bottom: 3px solid #5d5d5d;
+  border-bottom: 3px solid #fff;
 }
 .navbar-default .navbar-brand {
   color: #FFF100;
@@ -108,6 +109,14 @@ body {
 }
 .navbar-default .navbar-nav li:hover a {
   color: #FFF100;
+}
+header p {
+  font-weight: normal;
+  color: #fff;
+}
+header strong {
+  color: #fff100;
+  font-weight: bold;
 }
 
 /* =Front Page
@@ -153,8 +162,12 @@ body {
 #pricing .text {
   padding-top: 100px;
 }
+#home h1 {
+  font-weight: bold;
+}
 #home h2 {
   float:right;
+  letter-spacing: -2px;
 }
 #about .text {
   color: #fff;

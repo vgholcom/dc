@@ -22,6 +22,7 @@ add_action( 'wp_enqueue_scripts', 'dc_scripts' );
  */
 function dc_styles() {
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.1.1' );
+    wp_enqueue_style( 'font', 'http://fonts.googleapis.com/css?family=Montserrat' );
     wp_enqueue_style( 'dc-css', get_stylesheet_uri(), array('bootstrap-css'), '1.0' );
 }
 add_action( 'wp_enqueue_scripts', 'dc_styles' );

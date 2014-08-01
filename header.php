@@ -33,7 +33,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="navbar-brand navbar-left">
-							<?php bloginfo( 'name' ); ?>
+							<p><strong>Dark Canary</strong><span>studio</span></p>
 						</div>
 						<!-- Brand and toggle get grouped for better mobile display -->
 						<div class="navbar-header">
