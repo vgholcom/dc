@@ -147,7 +147,10 @@ header strong {
 #about2,
 #pricing {
   position: relative;
+  border-bottom: #231F20 100px solid; 
+
 }
+
 #home img,
 #about img,
 #about2 img,
@@ -160,14 +163,24 @@ header strong {
 #about .text,
 #about2 .text,
 #pricing .text {
-  padding-top: 100px;
+  padding-top: 150px;
 }
-#home h1 {
+#home h1,
+#about h1,
+#about2 h1,
+#pricing h1,
+#contact h1 {
   font-weight: bold;
 }
 #home h2 {
   float:right;
   letter-spacing: -2px;
+}
+#about h2,
+#about2 h2,
+#pricing h2 {
+  font-weight: bold;
+  font-size: 24px;
 }
 #about .text {
   color: #fff;
